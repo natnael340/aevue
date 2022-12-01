@@ -7,19 +7,21 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@react-native-community/blur": "^4.3.0",
+    "@react-native-community/masked-view": "*",
+    "@react-navigation/bottom-tabs": "^6.4.3",
+    "@react-navigation/native": "^6.0.16",
     "expo": "~46.0.17",
+    "expo-constants": "~13.2.4",
+    "expo-linear-gradient": "~11.4.0",
     "expo-status-bar": "~1.4.0",
+    "fbjs": "*",
     "react": "18.0.0",
     "react-native": "0.69.6",
-    "fbjs": "*",
-    "expo-constants": "~13.2.4",
-    "@expo/vector-icons": "^13.0.0",
     "react-native-paper": "4.9.2",
-    "expo-linear-gradient": "~11.4.0",
-    "react-native-text-gradient": "*",
     "react-native-safe-area-context": "4.3.1",
-    "@react-native-community/masked-view": "*",
-    "@react-native-masked-view/masked-view": "0.2.7"
+    "react-native-text-gradient": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
