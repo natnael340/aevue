@@ -16,18 +16,18 @@ const PlayCard = ({ item }) => {
           <Text style={styles.playcardTitle}>{item.name}</Text>
           <View style={styles.playcardDescriptionContainer}>
             <Text style={styles.playcardNewVideoText}>
-              +{item.newv} New Videos
+              +{item.newVideos} New Videos
             </Text>
             <View style={styles.playcardRatioContainer}>
               <AntDesign name="eyeo" size={12} color="#8C8797" />
               <Text style={styles.playcardRatioText}>
-                {item.fin}/{item.tot}
+                {item.finished}/{item.total}
               </Text>
             </View>
           </View>
           <View style={{ marginTop: 15 }}>
             <ProgressBar
-              progress={parseFloat(item.fin) / parseFloat(item.tot)}
+              progress={parseFloat(item.finished) / parseFloat(item.total)}
               color="#F2BC3D"
               style={styles.playcardProgressBar}
             />
