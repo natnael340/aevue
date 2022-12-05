@@ -4,6 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import MaskedView from "@react-native-community/masked-view";
 import PlayCard from "../components/PlayCard";
 import data from "../constants/data";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <View style={styles.container}>
@@ -25,6 +26,7 @@ const Home = () => {
         data={data}
         keyExtractor={(item, i) => item.id}
         renderItem={({ item }) => <PlayCard item={item} />}
+        ListFooterComponent={<Footer />}
       />
       <Text>Hello</Text>
     </View>

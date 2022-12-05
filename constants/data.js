@@ -23,8 +23,4 @@ export default data = [
     total: 21,
     finished: 21,
   },
-  {
-    id: 4,
-    footer: true,
-  },
 ];

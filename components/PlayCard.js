@@ -8,34 +8,30 @@ import { AntDesign } from "@expo/vector-icons";
 const PlayCard = ({ item }) => {
   return (
     <View>
-      {item?.footer ? (
-        <Footer item={item} />
-      ) : (
-        <View style={styles.playcard}>
-          <Image source={item.img} style={styles.playCardImage} />
-          <Text style={styles.playcardTitle}>{item.name}</Text>
-          <View style={styles.playcardDescriptionContainer}>
-            <Text style={styles.playcardNewVideoText}>
-              +{item.newVideos} New Videos
+      <View style={styles.playcard}>
+        <Image source={item.img} style={styles.playCardImage} />
+        <Text style={styles.playcardTitle}>{item.name}</Text>
+        <View style={styles.playcardDescriptionContainer}>
+          <Text style={styles.playcardNewVideoText}>
+            +{item.newVideos} New Videos
+          </Text>
+          <View style={styles.playcardRatioContainer}>
+            <AntDesign name="eyeo" size={12} color="#8C8797" />
+            <Text style={styles.playcardRatioText}>
+              {item.finished}/{item.total}
             </Text>
-            <View style={styles.playcardRatioContainer}>
-              <AntDesign name="eyeo" size={12} color="#8C8797" />
-              <Text style={styles.playcardRatioText}>
-                {item.finished}/{item.total}
-              </Text>
-            </View>
           </View>
-          <View style={{ marginTop: 15 }}>
-            <ProgressBar
-              progress={parseFloat(item.finished) / parseFloat(item.total)}
-              color="#F2BC3D"
-              style={styles.playcardProgressBar}
-            />
-          </View>
-
-          <PlayButton />
         </View>
-      )}
+        <View style={{ marginTop: 15 }}>
+          <ProgressBar
+            progress={parseFloat(item.finished) / parseFloat(item.total)}
+            color="#F2BC3D"
+            style={styles.playcardProgressBar}
+          />
+        </View>
+
+        <PlayButton />
+      </View>
     </View>
   );
 };
