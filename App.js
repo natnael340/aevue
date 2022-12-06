@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StatusBar, StyleSheet, View } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -20,6 +20,7 @@ const App = () => {
           <Tab.Screen name="Profile" component={Temp} />
         </Tab.Navigator>
       </View>
+      <StatusBar hidden />
     </NavigationContainer>
   );
 };
